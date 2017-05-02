@@ -1,0 +1,68 @@
+{
+  "root": true,
+
+  "env": {
+    "node": true,
+    "es6": true
+  },
+
+  "globals": {
+    "describe": true,
+    "xdescribe": true,
+    "it": true,
+    "xit": true,
+    "before": true,
+    "beforeEach": true,
+    "after": true,
+    "afterEach": true
+  },
+
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+
+    }
+  },
+
+  "rules": {
+    /* Errors */
+    "no-undef": 2,
+    "no-cond-assign": 2,
+    "no-const-assign": 2,
+    "no-dupe-args": 2,
+    "no-dupe-keys": 2,
+    "no-duplicate-case": 2,
+    "no-ex-assign": 2,
+    "no-func-assign": 2,
+    "no-inner-declarations": 2,
+    "no-invalid-regexp": 2,
+    "no-sparse-arrays": 2,
+    "no-unreachable": 2,
+    "no-console": 2,
+    "use-isnan": 2,
+    "strict": [2, "never"],
+
+    /* Warnings */
+    "semi": [1, "always"],
+    "indent": [1, 2, {"SwitchCase": 1}],
+    "linebreak-style": [1, "unix"],
+    "no-extra-semi": 1,
+    "valid-typeof": 1,
+    "semi-spacing": [1, { "before": false, "after": true }],
+    "brace-style": [1, "1tbs", { "allowSingleLine": true }],
+    "no-unused-vars": [1, { "vars": "all", "args": "none" }],
+    "curly": 1,
+    "object-curly-spacing": [1, "always"],
+    "keyword-spacing": [2, { "before": true, "after": true }],
+    "no-multi-spaces": 1,
+    "space-before-blocks": 1,
+    "no-multiple-empty-lines": [1, { "max": 1 }],
+    "no-spaced-func": 1,
+    "no-var": 1,
+    "prefer-const": 1,
+    "comma-dangle": 1,
+
+    /* Disabled */
+    "eqeqeq": 0
+  }
+}
