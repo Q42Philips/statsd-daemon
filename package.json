@@ -1,6 +1,6 @@
 {
-  "name": "statsd-daemon",
-  "version": "1.0.0",
+  "name": "@q42philips/statsd-daemon",
+  "version": "0.0.0",
   "description": "Simple statsd deamon to observe metrics being emitted on localhost",
   "main": "src/index.js",
   "scripts": {
