@@ -1,12 +1,15 @@
 {
-  "name": "statsd-daemon",
-  "version": "1.0.0",
+  "name": "@q42philips/statsd-daemon",
+  "version": "0.0.0",
   "description": "Simple statsd deamon to observe metrics being emitted on localhost",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "test": "npm run lint",
     "lint": "eslint . --max-warnings 0 --ignore-path .eslintignore"
+  },
+  "bin": {
+    "statsd-daemon": "src/index.js"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 const dgram = require('dgram');
 const server = dgram.createSocket('udp4');
 
