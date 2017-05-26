@@ -27,5 +27,8 @@
   "homepage": "https://github.com/Q42Philips/statsd-daemon#readme",
   "devDependencies": {
     "eslint": "^3.19.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3"
   }
 }

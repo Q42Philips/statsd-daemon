@@ -2,6 +2,8 @@
 const dgram = require('dgram');
 const server = dgram.createSocket('udp4');
 
+const chalk = require('chalk');
+
 const PORT = 8125;
 const HOST = '127.0.0.1';
 
@@ -12,8 +14,9 @@ server.on('listening', () => {
 });
 
 server.on('message', (message, remote) => {
+  const [keyval, datatype, tags] = message.toString('utf8').split('|');
   // eslint-disable-next-line no-console
-  console.log(`${remote.address}:${remote.port} - ${message}`);
+  console.log(chalk.cyan(new Date().toTimeString()) + '\t' + chalk.green(keyval) + '(' + chalk.italic.red(datatype) + ')\t' + chalk.italic.yellow(tags));
 });
 
 server.bind(PORT, HOST);
