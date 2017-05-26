@@ -2,8 +2,7 @@
 
 const updateNotifier = require('update-notifier');
 /* Notify if an update is available */
-const packageJson = require('../package.json');
-updateNotifier({ packageJson }).notify();
+updateNotifier({ pkg: require('../package.json') }).notify();
 
 const dgram = require('dgram');
 const server = dgram.createSocket('udp4');
