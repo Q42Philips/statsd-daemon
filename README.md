@@ -2,6 +2,8 @@
 
 This repository contains a simple statsd UDP server. When you run it on your local machine any other  application emitting StatsD metrics to localhost will end up on the console output of this statsd-deamon.
 
+![Awesome console output](https://cloud.githubusercontent.com/assets/570645/26489437/a80df072-4207-11e7-9c20-b1cfaa7e60d0.png)
+
 Handy if you want to verify if your metrics are what you expect them to be.
 
 NOTE: this is by no means a full-fledged statsd aggregator.
