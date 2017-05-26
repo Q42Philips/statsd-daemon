@@ -1,4 +1,10 @@
 #! /usr/bin/env node
+
+const updateNotifier = require('update-notifier');
+/* Notify if an update is available */
+const packageJson = require('../package.json');
+updateNotifier({ packageJson }).notify();
+
 const dgram = require('dgram');
 const server = dgram.createSocket('udp4');
 
