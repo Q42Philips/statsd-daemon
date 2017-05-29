@@ -1,4 +1,5 @@
 # Statsd Daemon
+[![npm version](https://badge.fury.io/js/%40q42philips%2Fstatsd-daemon.svg)](https://badge.fury.io/js/%40q42philips%2Fstatsd-daemon)
 
 This repository contains a simple statsd UDP server. When you run it on your local machine any other  application emitting StatsD metrics to localhost will end up on the console output of this statsd-deamon.
 
@@ -8,15 +9,15 @@ Handy if you want to verify if your metrics are what you expect them to be.
 
 NOTE: this is by no means a full-fledged statsd aggregator.
 
-# Usage
+## Usage
 
-## Install
+### Install
 You can install globally for convenience, which will add a `statsd-daemon` executable to your path:
 ```
 $ npm install -g @q42philips/statsd-daemon
 ```
 
-# Run
+### Run
 If installed globally:
 ```
 $ statsd-daemon
@@ -27,16 +28,16 @@ Otherwise in this directory:
 $ npm start
 ```
 
-# Contributing
+## Contributing
 
 
-## Local development
+### Local development
 
-You can also create a symlink in your global node modules, making the `hue` binary globally accessible. Note that this only works if you first uninstall the NPM version
+You can also create a symlink in your global node modules, making the `statsd-daemon` binary globally accessible. Note that this only works if you first uninstall the NPM version
 ``` bash
 $ npm uninstall -g @q42philips/statsd-daemon
 $ npm link
-$ hue <command>
+$ statsd-daemon
 ```
 
 And then after testing, just run
@@ -45,7 +46,7 @@ $ npm unlink
 $ npm install -g @q42philips/statsd-daemon
 ```
 
-## Creating a new release
+### Creating a new release
 After PRs are merged to master, you can create a new version using npm. Please carefully check the changes made since the last release and [choose your update type accordingly](http://semver.org/), then create a new version using the command below. This will succeed only if the tests pass, to avoid versioning broken code. It will also push the newly created tag to this repository.
 ``` bash
 $ npm version <major|minor|patch>
