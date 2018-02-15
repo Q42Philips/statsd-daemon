@@ -49,7 +49,7 @@ $ yarn global add @q42philips/statsd-daemon
 ### Creating a new release
 After PRs are merged to master, you can create a new version using yarn. Please carefully check the changes made since the last release and [choose your update type accordingly](http://semver.org/), then create a new version using the command below. This will succeed only if the tests pass, to avoid versioning broken code. It will also push the newly created tag to this repository.
 ``` bash
-$ yarn version <major|minor|patch>
+$ npm version <major|minor|patch>
 ```
 
 After creating a new version, you may publish it to the npm registry using the following command, which will automatically compile it using babel before publishing:
