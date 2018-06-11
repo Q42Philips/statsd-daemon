@@ -4,7 +4,7 @@
   "description": "Simple statsd deamon to observe metrics being emitted on localhost",
   "main": "src/index.js",
   "scripts": {
-    "postinstall": "if [ -t 0 ] && [ -z \"$TRAVIS\" ]; then npx --userconfig .npmrc @q42philips/license-checker; fi",
+    "postinstall": "npx --userconfig .npmrc @q42philips/license-checker",
     "start": "node src/index.js",
     "test": "yarn lint",
     "lint": "eslint . --max-warnings 0 --ignore-path .eslintignore",
