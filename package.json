@@ -4,11 +4,9 @@
   "description": "Simple statsd deamon to observe metrics being emitted on localhost",
   "main": "src/index.js",
   "scripts": {
-    "postinstall": "npx --userconfig .npmrc @q42philips/license-checker",
     "start": "node src/index.js",
     "test": "yarn lint",
-    "lint": "eslint . --max-warnings 0 --ignore-path .eslintignore",
-    "preinstall": "node -e \"if (process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('Use yarn for installing: https://yarnpkg.com/en/docs/install')\""
+    "lint": "eslint . --max-warnings 0 --ignore-path .eslintignore"
   },
   "bin": {
     "statsd-daemon": "src/index.js"
