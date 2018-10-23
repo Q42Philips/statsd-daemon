@@ -14,7 +14,7 @@ NOTE: this is by no means a full-fledged statsd aggregator.
 ### Install
 You can install globally for convenience, which will add a `statsd-daemon` executable to your path:
 ```
-$ yarn gobal add @q42philips/statsd-daemon
+$ npm install -g @q42philips/statsd-daemon
 ```
 
 ### Run
@@ -25,7 +25,7 @@ $ statsd-daemon
 
 Otherwise in this directory:
 ```
-$ yarn start
+$ npm start
 ```
 
 ## Contributing
@@ -35,26 +35,26 @@ $ yarn start
 
 You can also create a symlink in your global node modules, making the `statsd-daemon` binary globally accessible. Note that this only works if you first uninstall the NPM version
 ``` bash
-$ yarn global add @q42philips/statsd-daemon
-$ yarn link
+$ npm uninstall -g @q42philips/statsd-daemon
+$ npm link
 $ statsd-daemon
 ```
 
 And then after testing, just run
 ``` bash
-$ yarn unlink
-$ yarn global add @q42philips/statsd-daemon
+$ npm unlink
+$ npm install -g @q42philips/statsd-daemon
 ```
 
 ### Creating a new release
-After PRs are merged to master, you can create a new version using yarn. Please carefully check the changes made since the last release and [choose your update type accordingly](http://semver.org/), then create a new version using the command below. This will succeed only if the tests pass, to avoid versioning broken code. It will also push the newly created tag to this repository.
+After PRs are merged to master, you can create a new version using NPM. Please carefully check the changes made since the last release and [choose your update type accordingly](http://semver.org/), then create a new version using the command below. This will succeed only if the tests pass, to avoid versioning broken code. It will also push the newly created tag to this repository.
 ``` bash
 $ npm version <major|minor|patch>
 ```
 
 After creating a new version, you may publish it to the npm registry using the following command, which will automatically compile it using babel before publishing:
 ``` bash
-$ yarn publish
+$ npm publish
 ```
 
 Finally, please take the time to add a changelog to the newly created release on Github, noting the new features, fixes or other notable stuff.
