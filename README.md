@@ -1,13 +1,10 @@
 # Statsd Daemon
-[![npm version](https://badge.fury.io/js/%40q42philips%2Fstatsd-daemon.svg)](https://badge.fury.io/js/%40q42philips%2Fstatsd-daemon)
 
-This repository contains a simple statsd UDP server. When you run it on your local machine any other  application emitting StatsD metrics to localhost will end up on the console output of this statsd-deamon.
+This is a simple statsd UDP server which can receive the telemetry emitted by your local statsd clients. When you run it on your machine any other application emitting StatsD metrics to localhost will end up on the console output of this statsd-deamon:
 
 ![Awesome console output](https://cloud.githubusercontent.com/assets/570645/26489437/a80df072-4207-11e7-9c20-b1cfaa7e60d0.png)
 
-Handy if you want to verify if your metrics are what you expect them to be.
-
-NOTE: this is by no means a full-fledged statsd aggregator.
+This is especially usefull if you want to verify your applications behaviour locally before shipping and having to rely on the roundtrip with your time series database accumulating your metrics. There is no aggregation being done; the metrics are piped to the console with some color coding enhancement.
 
 ## Usage
 
@@ -58,3 +55,8 @@ $ npm publish
 ```
 
 Finally, please take the time to add a changelog to the newly created release on Github, noting the new features, fixes or other notable stuff.
+
+
+### LICENSE
+
+MIT License
