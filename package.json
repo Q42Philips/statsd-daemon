@@ -4,9 +4,12 @@
   "description": "Simple statsd deamon to observe metrics being emitted on localhost",
   "main": "src/index.js",
   "scripts": {
+    "postinstall": "npm run fix-registry-protocols && npm run checklicenses",
     "start": "node src/index.js",
     "test": "npm run lint && npm audit",
-    "lint": "eslint . --max-warnings 0 --ignore-path .eslintignore"
+    "lint": "eslint . --max-warnings 0 --ignore-path .eslintignore",
+    "fix-registry-protocols": "sed -i.bak -e 's/http:/https:/' -- package-lock.json && rm -- package-lock.json.bak",
+    "checklicenses": "npx --userconfig .npmrc @q42philips/license-checker"
   },
   "bin": {
     "statsd-daemon": "src/index.js"
